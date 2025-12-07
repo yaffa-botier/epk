@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YAFFA – Electronic Press Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official electronic press kit for YAFFA – NYC rock guitarist, session player, and emerging solo artist." />
+  <style>
+    :root {
+      --bg: #050509;
+      --bg-alt: #0c0c14;
+      --accent: #f5317f;
+      --accent-soft: rgba(245, 49, 127, 0.15);
+      --text: #f6f6f6;
+      --muted: #aaaaaa;
+      --border: #262636;
+      --card-radius: 18px;
+      --max-width: 1080px;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
+      --font-heading: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1b1024 0, #050509 55%);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      border-radius: 14px;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figcaption {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      gap: 16px;
+    }
+
+    .logo-text {
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 3px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 0;
+      background: var(--accent);
+      transition: width 0.2s ease-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .hero-left h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(42px, 5vw, 56px);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .hero-tagline {
+      font-size: 16px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 20px;
+    }
+
+    .hero-copy {
+      font-size: 15px;
+      max-width: 540px;
+      color: #e3e3e3;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 22px;
+    }
+
+    .badge {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(5, 5, 9, 0.7);
+    }
+
+    .badge-accent {
+      border-color: var(--accent-soft);
+      background: radial-gradient(circle at top left, var(--accent-soft), transparent 55%);
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      background: none;
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(120deg, #f5317f, #ff9f45);
+      border-color: transparent;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-outline {
+      border-color: var(--border);
+      background: rgba(5, 5, 9, 0.7);
+      color: var(--muted);
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-photo-wrapper {
+      background: radial-gradient(circle at top, #f5317f33, #050509);
+      padding: 10px;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .hero-note {
+      position: absolute;
+      bottom: -14px;
+      right: 6px;
+      background: #050509ee;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+      gap: 26px;
+    }
+
+    section {
+      margin-bottom: 26px;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .card {
+      background: rgba(5, 5, 9, 0.88);
+      border-radius: var(--card-radius);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .card + .card {
+      margin-top: 12px;
+    }
+
+    .bio-short p {
+      font-size: 14px;
+      color: #dedede;
+    }
+
+    .bio-long p {
+      font-size: 13px;
+      color: #c4c4c4;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .list {
+      list-style: none;
+      font-size: 13px;
+      color: #d9d9d9;
+    }
+
+    .list li + li {
+      margin-top: 6px;
+    }
+
+    .pill-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .media-links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 11px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-size: 13px;
+      color: #e7e7e7;
+      margin-bottom: 8px;
+      background: #050509;
+    }
+
+    .media-links span {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .quote {
+      font-size: 13px;
+      color: #eaeaea;
+      border-left: 2px solid var(--accent);
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    .quote-source {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .contact-info {
+      font-size: 13px;
+      color: #e3e3e3;
+    }
+
+    .contact-info a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+    }
+
+    footer {
+      margin-top: 34px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-note {
+        bottom: 6px;
+        right: 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 24px 16px 40px;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        font-size: 13px;
+      }
+      .hero-copy {
+        font-size: 14px;
+      }
+      .card {
+        padding: 16px 14px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo-text">YAFFA • EPK</div>
+      <nav class="nav-links">
+        <a href="#bio">Bio</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#media">Music & Video</a>
+        <a href="#photos">Photos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION WITH MAIN IMAGE -->
+    <section class="hero" id="top">
+      <div class="hero-left">
+        <div class="hero-tagline">NYC Rock Guitarist • Session Player</div>
+        <h1>YAFFA</h1>
+        <p class="hero-copy">
+          High-energy rock guitarist blending classic glam attitude with modern punk edge.
+          Available for live shows, session work, and collaborations in New York City and beyond.
+        </p>
+        <div class="hero-badges">
+          <div class="badge badge-accent">Arena guest appearance</div>
+          <div class="badge">NYC / Long Island</div>
+          <div class="badge">Guitar • Bass • Piano</div>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Booking &amp; Collabs</a>
+          <a href="#media" class="btn btn-outline">Listen / Watch</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-photo-wrapper">
+          <!-- HERO IMAGE -->
+          <figure>
+            <img src="assets/yaffa-hero-arena.jpg" alt="YAFFA performing live at an arena show" />
+            <figcaption>Arena guest appearance – lead guitar feature</figcaption>
+          </figure>
+        </div>
+        <div class="hero-note">
+          <span>Live • Studio • Touring</span>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <div>
+        <!-- LEFT COLUMN: BIO + HIGHLIGHTS -->
+        <section id="bio">
+          <h2>Artist Bio</h2>
+          <div class="card bio-short">
+            <p>
+              YAFFA is an 18-year-old rock guitarist based in New York City, known for her high-energy
+              stage presence, melodic lead lines, and gritty, riff-driven sound. She’s already
+              performed on major stages and has become a go-to session player for up-and-coming NYC bands.
+            </p>
+          </div>
+          <div class="card bio-long">
+            <p>
+              Starting on classical piano at age 5, YAFFA spent nearly a decade building her
+              musical foundation before falling in love with the guitar. Inspired by iconic rock
+              performances and guitar heroes, she picked up a Stratocaster and began teaching
+              herself through online videos before continuing with private lessons.
+            </p>
+            <br />
+            <p>
+              Since then, she has worked as a session guitarist and bassist
+              for local NYC and Long Island artists, and played on stages across the city. On stage,
+              she combines tight rhythm work with expressive leads; off stage, she is developing her
+              own material as a solo artist, crafting songs that blend classic rock, modern punk, and
+              glam-influenced guitar tones.
+            </p>
+          </div>
+        </section>
+
+        <section id="highlights">
+          <h2>Highlights &amp; Credits</h2>
+          <div class="card">
+            <div class="two-col">
+              <div>
+                <div class="pill-label">Career Highlights</div>
+                <ul class="list">
+                  <li>Guest guitarist at a major arena show</li>
+                  <li>Session guitarist &amp; bassist for NYC-based bands</li>
+                  <li>Live performances across NYC and Long Island</li>
+                  <li>Multi-instrumentalist: guitar, bass, piano</li>
+                </ul>
+              </div>
+              <div>
+                <div class="pill-label">Style &amp; Sound</div>
+                <ul class="list">
+                  <li>Rock • Punk • Alternative • Glam-inspired</li>
+                  <li>High-energy stage presence</li>
+                  <li>Riff-driven rhythm and melodic leads</li>
+                  <li>Focus on feel, tone, and connection</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="pill-label">Available For</div>
+            <ul class="list">
+              <li>Live guitar (lead or rhythm) and bass</li>
+              <li>Studio &amp; remote session recording</li>
+              <li>Touring support &amp; one-off shows</li>
+              <li>Co-writing and collaborations</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <div>
+        <!-- RIGHT COLUMN: MEDIA, PRESS, PHOTOS, CONTACT -->
+        <section id="media">
+          <h2>Music &amp; Video</h2>
+          <div class="card">
+            <div class="pill-label">Listen</div>
+            <div class="media-links">
+              <!-- Replace href values with your actual links -->
+              <a href="https://open.spotify.com" target="_blank" rel="noopener">
+                <div>
+                  Spotify
+                  <div><span>Singles / Sessions</span></div>
+                </div>
+                <span>Open</span>
+              </a>
+              <a href="https://music.apple.com" target="_blank" rel="noopener">
+                <div>
+                  Apple Music
+                  <div><span>Releases</span></div>
+                </div>
+                <span>Open</span>
+              </a>
+              <a href="https://soundcloud.com" target="_blank" rel="noopener">
+                <div>
+                  SoundCloud / Demos
+                  <div><span>Works in progress</span></div>
+                </div>
+                <span>Open</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="pill-label">Watch</div>
+            <div class="media-links">
+              <a href="https://youtube.com" target="_blank" rel="noopener">
+                <div>
+                  Live Show Highlight
+                  <div><span>Performance clip</span></div>
+                </div>
+                <span>Play</span>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener">
+                <div>
+                  Guitar Highlight Reel
+                  <div><span>Solos &amp; riffs</span></div>
+                </div>
+                <span>Play</span>
+              </a>
+              <a href="https://instagram.com/yaffa_botier" target="_blank" rel="noopener">
+                <div>
+                  Instagram Clips
+                  <div><span>Reels &amp; stories</span></div>
+                </div>
+                <span>View</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Press &amp; Moments</h2>
+          <div class="card">
+            <!-- Add quotes later if you want -->
+            <div class="quote">
+              “YAFFA brings the kind of energy on guitar that makes every song feel bigger.”
+            </div>
+            <div class="quote-source">Promoter / Band</div>
+
+            <br />
+
+            <div class="quote">
+              “A young guitarist with serious stage presence and tone.”
+            </div>
+            <div class="quote-source">Teacher / Venue</div>
+
+            <br />
+
+            <div class="pill-label">Featured Live Moments</div>
+            <div class="photo-grid">
+              <figure>
+                <img src="assets/yaffa-arena-1.jpg" alt="Arena guest performance – close shot on guitar" />
+                
+              </figure>
+              <figure>
+                <img src="assets/yaffa-arena-2.jpg" alt="Arena guest performance with full band on stage" />
+                
+              </figure>
+              <figure>
+                <img src="assets/yaffa-arena-3.jpg" alt="Arena guest performance, smiling on stage" />
+                
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section id="photos">
+          <h2>Photos</h2>
+          <div class="card">
+            <div class="pill-label">Live &amp; Venue Shots</div>
+            <div class="photo-grid">
+              <figure>
+                <img src="assets/yaffa-club-brickwall.jpg" alt="Club show with brick wall background" />
+                <figcaption>Club show – NYC</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/yaffa-drom-back-to-back.jpg" alt="Live show at Drom with bassist" />
+                <figcaption>Live at Drom – back-to-back guitar &amp; bass</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/yaffa-drom-trio.jpg" alt="Live show at Drom with vocalist and bassist" />
+                <figcaption>Live at Drom – trio performance</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/yaffa-redlights-trio.jpg" alt="Rock trio under red lights on stage" />
+                <figcaption>Rock trio – NYC stage</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2>Contact / Booking</h2>
+          <div class="card">
+            <div class="contact-info">
+              <p><strong>Booking &amp; Collaboration:</strong></p>
+              <p>
+                Email:
+                <a href="mailto:your-email@example.com">your-email@example.com</a>
+              </p>
+              <p>
+                Instagram:
+                <a href="https://instagram.com/yaffa_botier" target="_blank" rel="noopener">@yaffa_botier</a>
+              </p>
+              <p>
+                TikTok:
+                <a href="https://tiktok.com/@yaffa_botier" target="_blank" rel="noopener">@yaffa_botier</a>
+              </p>
+              <p>Based in: New York City / Long Island, NY</p>
+              <br />
+              <p style="font-size: 12px; color: var(--muted);">
+                For press, booking, or session inquiries, please include dates, location, set length,
+                and any technical details in your message.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      &copy; <span id="year"></span> YAFFA – Electronic Press Kit
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
