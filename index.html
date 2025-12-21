@@ -322,11 +322,43 @@
     }
 
     .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 8px;
-    }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 16px;
+  justify-items: center;
+}
+
+.photo-grid figure {
+  width: 100%;
+  max-width: 260px;  /* size of each square */
+  aspect-ratio: 1 / 1; /* makes the container a perfect square */
+  overflow: hidden;
+  border-radius: 14px;
+  background: #0c0c14;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.photo-grid figure:hover {
+  transform: scale(1.06);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.55);
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* perfect square crop */
+}
+
+.photo-grid figcaption {
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+  padding-top: 6px;
+}
+
 
     .contact-info {
       font-size: 13px;
@@ -647,9 +679,9 @@
         </section>
 
         <section id="photos">
-          <h2>Photos</h2>
+          
           <div class="card">
-            <div class="pill-label">Live &amp; Venue Shots</div>
+            <div class="pill-label">Guest appearance - Yungblud @ Brooklyn Paramount</div>
             <div class="photo-grid">
               <figure>
                 <img src="assets/yaffa-club-brickwall.jpg" alt="Club show with brick wall background" />
